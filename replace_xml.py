@@ -10,7 +10,7 @@ import os
 def modify_xml(path):
     updateTree = ET.parse(path)
     root = updateTree.getroot()
-    # 修改sub2的数据值
+    # 修改数据值
     for object in root.findall('object'):  # 找到root节点下的所有object节点
         if object.find('name').text =='motorbike':
             object.find('name').text='motorcycle'
